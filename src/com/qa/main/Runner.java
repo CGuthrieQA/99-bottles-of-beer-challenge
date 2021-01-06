@@ -36,44 +36,13 @@ public class Runner {
 			
 			// logic
 			
-			// logic for 2 bottles, second line only has one bottle and needs changing
-//			if ( curBottles == 2 ) {
-//				
-//				// change the second line
-//				secondLine = "Take one down and pass it around, " + downBottles + " " + oneBottle + " on the wall.\r\n";
-//				
-//			} else if ( curBottles == 1 ) { // logic for 1 bottle, first line only has one and second line has 'no more'
-//				
-//				// change the first line
-//				firstLine = curBottles + " " + oneBottle + " on the wall, " + curBottles + " " + oneBottle + ".\r\n";
-//				
-//				// change the second line
-//				secondLine = "Take one down and pass it around, no more " + repString + " on the wall.\r\n";
-//
-//			} else if ( curBottles == 0 && bottlesOfBeer == 1 ) { // for when someone enters only one bottle to start singing from
-//				// change the first line
-//				firstLine = "No more " + repString + " on the wall, no more " + repString + ".\r\n";
-//				
-//				// change the second line
-//				secondLine = "Go to the store and buy some more, " + bottlesOfBeer + " " + oneBottle + " on the wall.\r\n";
-//			} else if ( curBottles == 0 ) { // logic for 0 bottles, both lines need alterations from the default
-//				
-//				// change the first line
-//				firstLine = "No more " + repString + " on the wall, no more " + repString + ".\r\n";
-//				
-//				// change the second line
-//				secondLine = "Go to the store and buy some more, " + bottlesOfBeer + " " + repString + " on the wall.\r\n";
-//				
-//			}
-			
-			if ( curBottles == 0 && bottlesOfBeer == 1 ) { // for when someone enters only one bottle to start singing from
+			if ( curBottles == 0 && bottlesOfBeer == 1 ) { // for the rare case when someone enters only one bottle to start singing from
 				// change the first line
 				firstLine = "No more " + repString + " on the wall, no more " + repString + ".\r\n";
 				
 				// change the second line
 				secondLine = "Go to the store and buy some more, " + bottlesOfBeer + " " + oneBottle + " on the wall.\r\n";
-			} else {
-				// easier than a lot of if and else if statements!
+			} else { // using a switch as it's more readable than a lot of if and else if statements!
 				switch(curBottles) {
 					case 2: // logic for 2 bottles, second line only has one bottle and needs changing
 						// change the second line
@@ -91,7 +60,6 @@ public class Runner {
 						// change the second line
 						secondLine = "Go to the store and buy some more, " + bottlesOfBeer + " " + repString + " on the wall.\r\n";	
 						break;
-					//default: 
 				}
 			}
 			
